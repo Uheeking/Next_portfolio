@@ -12,6 +12,13 @@ module.exports = {
 
 const nextConfig = {
   reactStrictMode: true,
+  images: {
+    domains: [
+      'www.notion.so',
+      'images.unsplash.com',
+      's3.us-west-2.amazonaws.com'
+    ]
+  },
   webpack5: true,
   webpack: (config) => {
     config.resolve.fallback = { fs: false };

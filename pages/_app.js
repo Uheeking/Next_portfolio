@@ -7,12 +7,14 @@ export default function App({ Component, pageProps }) {
   return (
     <ThemeProvider attribute="class">
       <Layout>
+        <div className="flex flex-col items-center justify-center min-h-screen min-h-screen px-5 mb-10">
         <Head>
           <title>망그러진 윤만이의 포트폴리오</title>
           <meta name="description" content="유희왕의 코딩은 계속된다." />
           <link rel="icon" href="/favicon.ico" />
         </Head>
         <Component {...pageProps} />
+        </div>
       </Layout>
     </ThemeProvider>
   );

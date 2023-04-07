@@ -1,4 +1,4 @@
-import Image from 'next/image'
+import Image from "next/image";
 
 export default function ProjectsItem({ data }) {
   const icon = data.icon.emoji;
@@ -10,53 +10,61 @@ export default function ProjectsItem({ data }) {
   const description = data.properties.Description.rich_text[0].plain_text;
   const imgSrc = data.cover?.file?.url || data.cover?.external.url;
 
+  const calculatedPeriod = (start, end) => {
+    const startDateStringArray = start.split('-');
+    const endDateStringArray = end.split('-');
+
+    var startDate = new Date(startDateStringArray[0], startDateStringArray[1], startDateStringArray[2]);
+    var endDate = new Date(endDateStringArray[0], endDateStringArray[1], endDateStringArray[2]);
+
+    console.log(`startDate: ${startDate}`)
+    console.log(`endDate: ${endDate}`)
+
+    const diffInMs = Math.abs(endDate - startDate);
+    const result = diffInMs / (1000 * 60 * 60 * 24);
+
+    console.log(`기간 : ${result}`)
+    return result;
+};
+
+
   return (
-    <div className="p-6 m-3 bg-slate-400 rounded-md">
-        <Image
+    <div className="project-card">
+      <Image
+        className="rounded-t-xl"
         alt="image"
         src={imgSrc}
-        style={{width: '100%', height:'60%'}}
+        style={{ width: "100%", height: "60%" }}
+        layout="responsive"
+        objectFit="none"
+        quality={100}
         width={100}
-        height={60} 
-        />
-      <h1>
+        height={60}
+      />
+      <div className="p-4 flex flex-col w-full">
+      <h1 className="text-xl font-bold">
         {icon} {title}
       </h1>
       <h3 className="flex mb-2">
-        {start}
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          fill="none"
-          viewBox="0 0 24 24"
-          strokeWidth={1.5}
-          stroke="currentColor"
-          className="w-5 h-6"
-        >
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            d="M17.25 8.25L21 12m0 0l-3.75 3.75M21 12H3"
-          />
-        </svg>
-        {end}
+        {start} ~ {end} ({calculatedPeriod(start, end)}일)
       </h3>
-      <div className="mb-2">
-      {stack.map((items) => (
-        <span
-          className="mr-2 p-1"
-          key={items.id}
-          style={{
-            backgroundColor: items.color,
-            color: items.color === "blue" ? "white" : "black",
-            borderRadius: '10px'
-          }}
-        >
-          {items.name}
-        </span>
-      ))}
+      <div className="mb-2 flex items-start">
+        {stack.map((items) => (
+          <h1
+            className="mr-2 p-1 rounded-md"
+            key={items.id}
+            style={{
+              backgroundColor: items.color,
+              color: items.color === "blue" ? "white" : "black",
+            }}
+          >
+            {items.name}
+          </h1>
+        ))}
       </div>
       <div>{team}</div>
       <div>{description}</div>
+      </div>
     </div>
   );
 }

@@ -8,10 +8,13 @@ export default function projects({ projects }) {
   console.log(projects);
   return (
     <>
-      <h1>총 프로젝트 : {projects.results.length}</h1>
-      {projects.results.map((items) => (
-        <ProjectsItem key={items.id} data={items}/>
-      ))}
+      <h1 className="text-4xl font-bold sm:text-6xl">총 프로젝트 : 
+      <span className="pl-4 text-blue-500">{projects.results.length}</span></h1>
+      <div className="grid grid-cols-1 md:grid-cols-2 m-6 py-10 gap-8 xs:w-full">
+        {projects.results.map((items) => (
+          <ProjectsItem key={items.id} data={items} />
+        ))}
+      </div>
     </>
   );
 }

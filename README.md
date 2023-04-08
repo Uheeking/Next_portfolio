@@ -24,13 +24,16 @@
 홈페이지는 프로젝트 페이지에 무엇이 나와있는지 설명해주는 페이지이다. 그리고 lottie 파일을 사용하여 구현하였다. header와 footer를 전역적으로 사용해주었다. 
 
 다크모드를 사용하여 전역적으로 어둡게 사용 가능하다. 해당 기능을 사용하게 되면, 글씨의 색깔을 모드에 따라 변하게 하였다.
-![image](https://user-images.githubusercontent.com/90121929/230699840-4fa4fb8f-3585-4c59-b679-9013e94618d8.png)
+
+<p align="center"><img src="https://user-images.githubusercontent.com/90121929/230699840-4fa4fb8f-3585-4c59-b679-9013e94618d8.png" height="500px"></p>
+
 ### 2. 프로젝트
 
 프로젝트 사이트는 노션의 api를 활용하여 구현하였다. 데이터베이스를 만들어 제목, 기간, 언어, 팀, 설명등을 가져와 grid형식으로 구현하였다. 
 
 한눈에 프로젝트는 어떠한 형식으로 구성했는지 알 수 있게 하였다. 또한, 이미지를 통해 어떤 프로젝트인지 시각적으로 알아보기 쉽게 하였다.
-![image](https://user-images.githubusercontent.com/90121929/230699848-09fc2b86-0048-4ba0-8148-2de7ce02ce25.png)
+<p align="center"><img src="https://user-images.githubusercontent.com/90121929/230699848-09fc2b86-0048-4ba0-8148-2de7ce02ce25.png" height="500px"></p>
+
 ### 3. contact
 
 프로젝트 제작자인 나와 연락할 수 있게 만든 페이지이다. 이 경우에 내가 연락할 수 있는 경로가 없어서 내 노션과 연결하였다. 그런데 노션과 연결하는 시간이 오래 걸려 이 부분은 조금더 수정해야할 듯하다.

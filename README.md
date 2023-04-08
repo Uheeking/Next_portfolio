@@ -1,39 +1,36 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+해당 프로젝트는 **개발하는 정대리**님의 유튜브를 보고 한 프로젝트입니다. 
 
-## Getting Started
+## 🤩 프로젝트 개발 목표
 
-First, run the development server:
+- ***홈***
+    - 프로젝트에 대한 소개와 lottie파일을 사용하였다.
+- ***notion api***
+    - notion api를 활용하여, 데이터베이스를 사용할 수 있다.
+- ***사용자와의 contact***
+    - 프로젝트를 만든 사용자와 contact할 수 있다.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-```
+## 🤔**사용 기술**
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- **언어** : Next.js
+- **Package**: next-themes(다크모드), react-lottie-player(lottie파일 사용)
+- **IDEs** : Vscode
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+## ❤️‍🔥 프로젝트 내용 설명
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+해당 프로젝트는 3가지 페이지로 설명이 가능하다. 
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+### 1. 홈
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+홈페이지는 프로젝트 페이지에 무엇이 나와있는지 설명해주는 페이지이다. 그리고 lottie 파일을 사용하여 구현하였다. header와 footer를 전역적으로 사용해주었다. 
 
-## Learn More
+다크모드를 사용하여 전역적으로 어둡게 사용 가능하다. 해당 기능을 사용하게 되면, 글씨의 색깔을 모드에 따라 변하게 하였다.
+![image](https://user-images.githubusercontent.com/90121929/230699840-4fa4fb8f-3585-4c59-b679-9013e94618d8.png)
+### 2. 프로젝트
 
-To learn more about Next.js, take a look at the following resources:
+프로젝트 사이트는 노션의 api를 활용하여 구현하였다. 데이터베이스를 만들어 제목, 기간, 언어, 팀, 설명등을 가져와 grid형식으로 구현하였다. 
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+한눈에 프로젝트는 어떠한 형식으로 구성했는지 알 수 있게 하였다. 또한, 이미지를 통해 어떤 프로젝트인지 시각적으로 알아보기 쉽게 하였다.
+![image](https://user-images.githubusercontent.com/90121929/230699848-09fc2b86-0048-4ba0-8148-2de7ce02ce25.png)
+### 3. contact
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
-# Next_portfolio
+프로젝트 제작자인 나와 연락할 수 있게 만든 페이지이다. 이 경우에 내가 연락할 수 있는 경로가 없어서 내 노션과 연결하였다. 그런데 노션과 연결하는 시간이 오래 걸려 이 부분은 조금더 수정해야할 듯하다.

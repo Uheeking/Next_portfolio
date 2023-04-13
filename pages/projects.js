@@ -38,6 +38,8 @@ export async function getStaticProps(context) {
     options
   );
 
+  console.log(process.env);
+
   const projects = await res.json();
 
   return {

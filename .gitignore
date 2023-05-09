@@ -30,3 +30,7 @@ yarn-error.log*
 
 # vercel
 .vercel
+
+#slack bot
+/slack-bot/node_modules
+/slack-bot/.env

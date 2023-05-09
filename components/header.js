@@ -32,12 +32,15 @@ export default function Header() {
             <Link href="/gpt" legacyBehavior>
               <a className="mr-5 hover:text-gray-900">ChatGPT</a>
             </Link>
-            <a
+            <Link href="/contact" legacyBehavior>
+              <a className="mr-5 hover:text-gray-900">Contact Me</a>
+            </Link>
+            {/* <a
               href="https://uheeking.notion.site/Main-Page-a8dceb27c07247ffa71c2d029b05ca05"
               className="mr-5 hover:text-gray-900"
             >
               Contact Me
-            </a>
+            </a> */}
           </nav>
           <DarkModeToggleButton />
         </div>

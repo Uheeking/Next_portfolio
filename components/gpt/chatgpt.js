@@ -6,7 +6,6 @@ export default function ProjectsItem({ data }) {
   const { properties } = data;
   const name = properties.Name.title[0].plain_text;
   const url = properties.URL.url;
-  const date = properties.Created.date.start;
 
   return (
     <div className="project-card">
@@ -21,7 +20,6 @@ export default function ProjectsItem({ data }) {
         />
         <div className="p-3">
           <h1 className="text-xl font-bold">{name}</h1>
-          <p>{date}</p>
           <Link href={url}>chatgpt 바로가기</Link>
         </div>
       </div>

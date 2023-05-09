@@ -34,6 +34,10 @@
 한눈에 프로젝트는 어떠한 형식으로 구성했는지 알 수 있게 하였다. 또한, 이미지를 통해 어떤 프로젝트인지 시각적으로 알아보기 쉽게 하였다.
 <p align="center"><img src="https://user-images.githubusercontent.com/90121929/230699848-09fc2b86-0048-4ba0-8148-2de7ce02ce25.png" height="500px"></p>
 
-### 3. contact
+### 3. ChatGPT
+<p align="center"><img src="https://user-images.githubusercontent.com/90121929/231706370-426e9ed3-e1d9-4f7a-8994-025be8a86342.png" height="500px"></p>
+chatgpt와 대화한 내용을 불러올 수 있는 기능을 구현하여, 노션 database에 넣어 저장하였다. 그리고 이것을 페이지에 불러올 수 있게 하였다. 또한, chatgpt 페이지로 이동하여 내가 무슨 대화를 나누었는지도 확인이 가능하다. 이러한 기능을 페이지에 구현하였다. 
+
+### 4. contact
 
 프로젝트 제작자인 나와 연락할 수 있게 만든 페이지이다. 이 경우에 내가 연락할 수 있는 경로가 없어서 내 노션과 연결하였다. 그런데 노션과 연결하는 시간이 오래 걸려 이 부분은 조금더 수정해야할 듯하다.

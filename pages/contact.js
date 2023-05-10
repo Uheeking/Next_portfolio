@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import axios from 'axios'
 
 export default function Contact() {
   const [name, setName] = useState("");
@@ -28,6 +29,15 @@ export default function Contact() {
   };
   const handleSubmit = (e) => {
     e.preventDefault();
+    axios
+    .post('http://localhost:3001/')
+    .then((result) => {
+        console.log(result);
+      })
+      .catch((error) => {
+        console.error(error);
+      });
+
   };
 
   const borderbox = {
@@ -71,7 +81,7 @@ export default function Contact() {
 
   return (
     <div>
-      <h1>Contact</h1>
+      <div className="text-xl font-bold">Contact</div>
       <form onSubmit={handleSubmit} style={forms}>
         <div>
           이름

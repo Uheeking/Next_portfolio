@@ -11,7 +11,7 @@ export default function Hero() {
         </h1>
         <br />{" "}
         <h3 className="text-2xl mb-4" style={{ marginTop: "-10px" }}>
-        &quot안녕하세요👋👋 개발자 유희왕입니다.&quot<br /> 배우기 위해 힘 쓰고, 궁금한
+        &quot;안녕하세요👋👋 개발자 유희왕입니다.&quot;<br /> 배우기 위해 힘 쓰고, 궁금한
           것이 있다면 물어볼려고 합니다. 항상 성장하기 위해 나아갈려고 합니다.
           <br />
         </h3>

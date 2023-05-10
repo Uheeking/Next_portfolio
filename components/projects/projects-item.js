@@ -21,7 +21,6 @@ export default function ProjectsItem({ data }) {
     const diffInMs = Math.abs(endDate - startDate);
     const result = diffInMs / (1000 * 60 * 60 * 24);
 
-    console.log(`기간 : ${result}`);
     return result;
   };
 

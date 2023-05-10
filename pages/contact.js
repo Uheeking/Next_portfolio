@@ -5,6 +5,7 @@ export default function Contact() {
     const [phone, setPhone] = useState('');
     const [email, setEmail] = useState('');
     const [text, setText] = useState('');
+    // onchange
   return (
     <div>
       <h1>Contact</h1>

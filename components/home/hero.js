@@ -7,10 +7,15 @@ export default function Hero() {
     <>
       <div className="lg:flex-grow md:w-1/2 lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-center text-center">
         <h1 className="title-font sm:text-4xl text-3xl mb-0 font-medium text-gray-900">
-          오늘도 열코딩!!
+          👩🏻‍💻 FullStack Programmer, Web Developer
         </h1>
-        <br/> <h3 className="text-2xl mb-4" style={{marginTop: '-10px'}}>안녕하세요. 유희왕입니다.<br/></h3>
-
+        <br />{" "}
+        <h3 className="text-2xl mb-4" style={{ marginTop: "-10px" }}>
+          "안녕하세요👋👋 개발자 유희왕입니다." 배우기 위해 힘 쓰고, 궁금한
+          것이 있다면 물어볼려고 합니다. 항상 성장하기 위해 나아갈려고 합니다.
+          그래서 만든 노션입니다. 이 곳은 저의 로그들이 가득한 곳입니다.
+          <br />
+        </h3>
         <p className="mb-8 leading-relaxed">
           계속적으로 코딩한 것을 업데이트할 예정입니다. 버튼을 클릭했을 때
           나오는 화면은 vue.js, react, flutter, next.js등을 하면서 만든
@@ -18,9 +23,7 @@ export default function Hero() {
         </p>
         <div className="flex justify-center">
           <Link href="/projects" legacyBehavior>
-            <a className="btn-project">
-              프로젝트 보러가기
-            </a>
+            <a className="btn-project">프로젝트 보러가기</a>
           </Link>
         </div>
       </div>

@@ -37,3 +37,6 @@ a {
 p {
     @apply text-slate-500 dark:text-slate-400
 }
+.darkness{
+    @apply dark:text-black
+}

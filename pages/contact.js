@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import axios from 'axios'
+import axios from "axios";
 
 export default function Contact() {
   const [name, setName] = useState("");
@@ -30,14 +30,21 @@ export default function Contact() {
   const handleSubmit = (e) => {
     e.preventDefault();
     axios
-    .post('http://localhost:3001/')
-    .then((result) => {
-        console.log(result);
+      .post("http://localhost:3001/", {
+        name: name,
+        phone: phone,
+        email: email,
+        text: text,
+      })
+      .then((result) => {
+        console.log(result.data.code);
+        if(result.data.code == 200){
+          alert(result.data.message)
+        }
       })
       .catch((error) => {
         console.error(error);
       });
-
   };
 
   const borderbox = {
@@ -76,50 +83,50 @@ export default function Contact() {
   const forms = {
     borderRadius: "5px",
     backgroundColor: "#f2f2f2",
-    padding: "20px",
+    padding: "30px 50px",
   };
 
   return (
-    <div>
-      <div className="text-xl font-bold">Contact</div>
+    <div className="sm:w-3/5 lg:w-2/5">
+      <div className="text-3xl italic font-bold">Contact</div>
       <form onSubmit={handleSubmit} style={forms}>
-        <div>
+        <div className="font-semibold">
           이름
-          <input
+        </div>
+        <input
             type="text"
             value={name}
             onChange={onChangeName}
             style={borderbox}
           />
-        </div>
-        <div>
+        <div className="font-semibold">
           휴대폰번호
+        </div>
           <input
             type="text"
             value={phone}
             onChange={onChangePhone}
             style={borderbox}
           />
-        </div>
-        <div>
+        <div className="font-semibold">
           이메일
+        </div>
           <input
             type="text"
             value={email}
             onChange={onChangeEmail}
             style={borderbox}
           />
-        </div>
-        <div>
+        <div className="font-semibold">
           전할 내용
           <br />
+        </div>
           <input
             type="textarea"
             value={text}
             onChange={onChangeText}
             style={borderbox}
           />
-        </div>
         <button
           style={isHovering ? hoverbtn : submitbtn}
           onMouseOver={handleMouseOver}

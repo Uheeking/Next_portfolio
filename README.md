@@ -1,4 +1,4 @@
-해당 프로젝트는 **개발하는 정대리**님의 유튜브를 보고 한 프로젝트입니다. 
+해당 프로젝트는 개발하는 정대리님의 유튜브를 보고 한 프로젝트입니다. ChatGPT와 slack bot등은 제가 추가한 사항입니다. 
 
 ## 🤩 프로젝트 개발 목표
 
@@ -25,7 +25,8 @@
 
 다크모드를 사용하여 전역적으로 어둡게 사용 가능하다. 해당 기능을 사용하게 되면, 글씨의 색깔을 모드에 따라 변하게 하였다.
 
-<p align="center"><img src="https://user-images.githubusercontent.com/90121929/230699840-4fa4fb8f-3585-4c59-b679-9013e94618d8.png" height="500px"></p>
+<p align="center"><img src="https://github.com/Uheeking/Next_portfolio/assets/90121929/1e935961-b8b5-4f0f-92a9-a9145a79efac" height="500px"></p>
+
 
 ### 2. 프로젝트
 
@@ -41,3 +42,18 @@ chatgpt와 대화한 내용을 불러올 수 있는 기능을 구현하여, 노�
 ### 4. contact
 
 프로젝트 제작자인 나와 연락할 수 있게 만든 페이지이다. 이 경우에 내가 연락할 수 있는 경로가 없어서 내 노션과 연결하였다. 그런데 노션과 연결하는 시간이 오래 걸려 이 부분은 조금더 수정해야할 듯하다.
+
+## 추가)
+
+contact부분이 로딩이 너무 오래걸려서 어떻게 할까 고민하다가 슬랙 봇으로 교체하였다.
+<p align="center"><img src="https://github.com/Uheeking/Next_portfolio/assets/90121929/5a4f4ea7-85ad-4af8-ad21-58e86e86adc5" height="500px"></p>
+위의 폼에 이름, 연락처, 전할 내용을 작성하고, 제출 버튼을 클릭하면 내 슬랙에 연락이 갈 수 있게 조치하였다.
+<p align="center"><img src="https://github.com/Uheeking/Next_portfolio/assets/90121929/dd351088-b3df-493d-940d-6c6871f7c80b" height="200px"></p>
+위는 내 슬렉에 온 연락이다. 
+
+## 홈페이지 가기
+
+<aside>
+💡 [https://next-portfolio-one-rho.vercel.app/](https://next-portfolio-one-rho.vercel.app/contact)
+
+</aside>

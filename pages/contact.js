@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
+require("dotenv").config();
+const URL = process.env.NEXT_PUBLIC_BACK_URL;
 
 export default function Contact() {
   const [name, setName] = useState("");
@@ -30,7 +32,7 @@ export default function Contact() {
   const handleSubmit = (e) => {
     e.preventDefault();
     axios
-      .post("http://localhost:3001/", {
+      .post(`${URL}`, {
         name: name,
         phone: phone,
         email: email,

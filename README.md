@@ -54,6 +54,6 @@ contact부분이 로딩이 너무 오래걸려서 어떻게 할까 고민하다�
 ## 홈페이지 가기
 
 <aside>
-💡 [https://next-portfolio-one-rho.vercel.app/](https://next-portfolio-one-rho.vercel.app/contact)
+💡 https://next-portfolio-one-rho.vercel.app/](https://next-portfolio-one-rho.vercel.app/contact
 
 </aside>

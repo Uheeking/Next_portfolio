@@ -16,10 +16,10 @@ export default function Header() {
           </Link>
           <nav className="md:ml-auto flex flex-wrap items-center text-base justify-center">
             <Link href="/" legacyBehavior>
-              <a className="mr-5 hover:text-gray-900">홈</a>
+              <a className="mr-5 hover:text-gray-900">Home</a>
             </Link>
             <Link href="/projects" legacyBehavior>
-              <a className="mr-5 hover:text-gray-900">프로젝트</a>
+              <a className="mr-5 hover:text-gray-900">Project</a>
             </Link>
             <Link href="/gpt" legacyBehavior>
               <a className="mr-5 hover:text-gray-900">ChatGPT</a>

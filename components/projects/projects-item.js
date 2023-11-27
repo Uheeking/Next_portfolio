@@ -7,7 +7,7 @@ export default function ProjectsItem({ data }) {
   const start = properties.Date.date.start;
   const end = properties.Date.date.end;
   const stack = properties.Stack.multi_select;
-  const team = properties.Team.rich_text[0].plain_text;
+  const team = properties.Team.multi_select;
   const description = properties.Description.rich_text[0].plain_text;
   const imgSrc = cover?.file?.url || cover?.external.url;
 
@@ -29,7 +29,7 @@ export default function ProjectsItem({ data }) {
       <Image
         className="rounded-t-xl"
         alt="image"
-        src={imgSrc}
+        // src={imgSrc}
         layout="responsive"
         objectFit="none"
         quality={100}
@@ -58,7 +58,14 @@ export default function ProjectsItem({ data }) {
             </h1>
           ))}
         </div>
-        <div>{team}</div>
+        <div>{team.map((items) => (
+            <h1
+              className="mr-2 p-1 rounded-md"
+              key={items.id}
+            >
+              {items.name}
+            </h1>
+          ))}</div>
         <div>{description}</div>
       </div>
     </div>

@@ -1,15 +1,16 @@
 import Image from "next/image";
 
 export default function ProjectsItem({ data }) {
-  const { icon, properties, cover } = data;
+  const { icon, properties } = data;
+  const { Name, Stack, Team, Description, Photo } = properties;
   const icons = icon.emoji;
-  const title = properties.Name.title[0].plain_text;
+  const title = Name.title[0].plain_text;
   const start = properties.Date.date.start;
   const end = properties.Date.date.end;
-  const stack = properties.Stack.multi_select;
-  const team = properties.Team.multi_select;
-  const description = properties.Description.rich_text[0].plain_text;
-  const imgSrc = cover?.file?.url || cover?.external.url;
+  const stack = Stack.multi_select;
+  const team = Team.multi_select;
+  const description = Description.rich_text[0].plain_text;
+  const imgSrc = Photo.rich_text[0].href;
 
   const calculatedPeriod = (start, end) => {
     const [startYear, startMonth, startDay] = start.split("-");
@@ -29,7 +30,7 @@ export default function ProjectsItem({ data }) {
       <Image
         className="rounded-t-xl"
         alt="image"
-        // src={imgSrc}
+        src={imgSrc}
         layout="responsive"
         objectFit="none"
         quality={100}
@@ -58,14 +59,13 @@ export default function ProjectsItem({ data }) {
             </h1>
           ))}
         </div>
-        <div>{team.map((items) => (
-            <h1
-              className="mr-2 p-1 rounded-md"
-              key={items.id}
-            >
+        <div style={{ margin: "5px" }}>
+          {team.map((items) => (
+            <span className="mr-2 p-1 rounded-md" key={items.id}>
               {items.name}
-            </h1>
-          ))}</div>
+            </span>
+          ))}
+        </div>
         <div>{description}</div>
       </div>
     </div>

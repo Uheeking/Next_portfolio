@@ -1,5 +1,4 @@
 import React from "react";
-import Animation from "./animation";
 import Link from "next/link";
 import profile from "@/public/profile.png";
 import Image from "next/image";
@@ -7,6 +6,7 @@ import Image from "next/image";
 export default function Hero() {
   return (
     <>
+    <div className="flex justify-center items-center h-screen">
       <div className="lg:flex-grow md:w-1/2 lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left mb-16 md:mb-0">
         <Image
           src={profile}
@@ -24,6 +24,7 @@ export default function Hero() {
             <a className="btn-project">프로젝트 보러가기</a>
           </Link>
         </div>
+      </div>
       </div>
     </>
   );

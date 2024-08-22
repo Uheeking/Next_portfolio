@@ -34,3 +34,4 @@ yarn-error.log*
 #slack bot
 /slack-bot/node_modules
 /slack-bot/.env
+.env

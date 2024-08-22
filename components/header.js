@@ -20,7 +20,7 @@ export default function Header() {
             <Link href="/" legacyBehavior>
               <a className="mr-5 hover:text-gray-900">Home</a>
             </Link>
-            <Link href="/projects/all" legacyBehavior>
+            <Link href="/project" legacyBehavior>
               <a className="mr-5 hover:text-gray-900">Project</a>
             </Link>
             <Link href="/gpt" legacyBehavior>

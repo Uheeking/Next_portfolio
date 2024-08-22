@@ -32,10 +32,12 @@ export default function ProjectsItem({ data }) {
         alt="image"
         src={imgSrc}
         layout="responsive"
-        objectFit="none"
-        quality={100}
+        objectFit="cover"
+        quality={75} // Reducing quality can significantly decrease loading time
         width={100}
         height={60}
+        priority // Preload image if it's above the fold
+        sizes="(max-width: 768px) 100vw, 50vw" // Use appropriate sizes based on viewport
       />
       <div className="p-4 flex flex-col w-full">
         <h1 className="text-xl font-bold">

@@ -1,6 +1,6 @@
 import React from "react";
 import Link from "next/link";
-import profile from "@/public/profile.png";
+import profile from "../../../public/profile.png";
 import Image from "next/image";
 
 export default function Hero() {

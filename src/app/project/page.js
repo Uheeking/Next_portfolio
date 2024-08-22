@@ -6,7 +6,7 @@ import axios from "axios";
 require("dotenv").config();
 
 const url = process.env.NEXT_PUBLIC_NOTION_URL;
-const ProjectsItem = dynamic(() => import('@/src/app/components/projects-item'));
+const ProjectsItem = dynamic(() => import('../components/projects-item'));
 
 export default function CategoryPage() {
     const router = useRouter();

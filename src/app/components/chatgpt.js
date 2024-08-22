@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import ChatGPT_logo from "@/public/ChatGPT_logo.png";
+import ChatGPT_logo from "../../../public/ChatGPT_logo.png";
 
 export default function ProjectsItem({ data }) {
   const { properties } = data;

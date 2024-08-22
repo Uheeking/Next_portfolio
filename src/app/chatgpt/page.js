@@ -5,7 +5,7 @@ import axios from "axios";
 require("dotenv").config();
 
 const url = process.env.NEXT_PUBLIC_NOTION_URL;
-const Chatgpt = dynamic(() => import('@/src/app/components/chatgpt'));
+const Chatgpt = dynamic(() => import('./components/chatgpt'));
 
 export default function gpt() {
   const [projects, setProjects] = useState([]);

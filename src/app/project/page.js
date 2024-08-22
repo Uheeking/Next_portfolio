@@ -1,7 +1,6 @@
 "use client";
 import dynamic from 'next/dynamic';
 import React, { useState, useEffect, useMemo } from "react";
-import Link from "next/link";
 import { useRouter } from 'next/navigation';
 import axios from "axios";
 require("dotenv").config();
@@ -63,22 +62,24 @@ export default function CategoryPage() {
 
     return (
         <>
-            <h1 className="text-4xl font-bold sm:text-6xl mb-3">
-                총 프로젝트 : <span className="text-blue-500">{filteredProjects.length}</span>
-            </h1>
-            <div className="flex">
-                {categories.map((cate, index) => (
-                    <div key={index}>
-                        <a
-                            className={`ml-2 text-blue-500 cursor-pointer ${selectedCate === cate && "font-bold"}`}
-                            onClick={() => handleCategoryClick(cate)}
-                        >
-                            #{cate} ({categoryCounts[cate]})
-                        </a>
-                    </div>
-                ))}
+            <div className="flex flex-col items-center justify-center text-center">
+                <h1 className="text-4xl font-bold sm:text-6xl mb-3">
+                    총 프로젝트 : <span className="text-blue-500">{filteredProjects.length}</span>
+                </h1>
+                <div className="flex">
+                    {categories.map((cate, index) => (
+                        <div key={index}>
+                            <a
+                                className={`ml-2 text-blue-500 cursor-pointer ${selectedCate === cate && "font-bold"}`}
+                                onClick={() => handleCategoryClick(cate)}
+                            >
+                                #{cate} ({categoryCounts[cate]})
+                            </a>
+                        </div>
+                    ))}
+                </div>
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 m-6 py-10 gap-8 xs:w-full">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 m-6 py-10 gap-8 xs:w-full justify-center">
                 {filteredProjects.map((item) => (
                     <ProjectsItem key={item.id} data={item} category={selectedCate} />
                 ))}

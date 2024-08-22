@@ -1,0 +1,37 @@
+"use client";
+import React, {useState, useEffect} from "react";
+import dynamic from 'next/dynamic';
+import axios from "axios";
+require("dotenv").config();
+
+const url = process.env.NEXT_PUBLIC_NOTION_URL;
+const Chatgpt = dynamic(() => import('@/src/app/components/chatgpt'));
+
+export default function gpt() {
+  const [projects, setProjects] = useState([]);
+
+  useEffect(() => {
+    axios.get(`${url}/api/gpt`)
+            .then(response => {
+                const gptProjects = response.data.results;
+                setProjects(gptProjects);
+            })
+            .catch(error => {
+                console.error("Error fetching data: ", error);
+            });
+    
+  }, []);
+  return (
+    <>
+    <div className="flex flex-col items-center justify-center text-center">
+      <h1 className="text-4xl font-bold sm:text-5xl">총 대화내용 수 : 
+      <span className="pl-4 text-blue-500">{projects.length}</span></h1>
+      <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 m-6 py-10 gap-8 xs:w-full">
+        {projects.map((items) => (
+          <Chatgpt key={items.id} data={items} />
+        ))}
+      </div>
+      </div>
+    </>
+  );
+}

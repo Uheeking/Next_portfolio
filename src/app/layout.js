@@ -32,7 +32,7 @@ export default function RootLayout({ children }) {
               <Link href="/project" legacyBehavior>
                 <a className="mr-5 hover:text-gray-900">Project</a>
               </Link>
-              <Link href="/gpt" legacyBehavior>
+              <Link href="/chatgpt" legacyBehavior>
                 <a className="mr-5 hover:text-gray-900">ChatGPT</a>
               </Link>
               <Link href="/contact" legacyBehavior>

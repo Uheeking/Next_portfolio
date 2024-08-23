@@ -1,6 +1,7 @@
 "use client";
 import dynamic from 'next/dynamic';
 import React, { useState, useEffect, useMemo } from "react";
+import Spinner from "../components/Spinner";
 import { useRouter } from 'next/navigation';
 import axios from "axios";
 require("dotenv").config();
@@ -79,11 +80,15 @@ export default function CategoryPage() {
                     ))}
                 </div>
             </div>
+            {filteredProjects.length === 0 ? (
+          <Spinner />  // Show spinner while data is loading
+        ) : (
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 m-6 py-10 gap-8 xs:w-full justify-center">
-                {filteredProjects.map((item) => (
-                    <ProjectsItem key={item.id} data={item} category={selectedCate} />
-                ))}
+            {filteredProjects.map((item) => (
+                <ProjectsItem key={item.id} data={item} category={selectedCate} />
+            ))}
             </div>
+        )}  
         </>
     );
 }

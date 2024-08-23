@@ -31,7 +31,11 @@ p {
 }
 
 .darkness {
-    @apply dark:text-black
+    @apply dark:text-black 
+}
+
+input{
+    @apply dark:text-white;
 }
 
 /* Spinner styles */

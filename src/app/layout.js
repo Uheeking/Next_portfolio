@@ -2,6 +2,7 @@ import dynamic from 'next/dynamic';
 import Link from "next/link";
 import Image from "next/image";
 import profile from '../../public/profile.png';
+import Providers from './Provider'
 import '../../src/app/globals.css'
 
 const DarkModeToggleButton = dynamic(() => import('./components/dark-mode-toggle-button'));
@@ -15,6 +16,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body>
+      <Providers>
         <header className="text-gray-600 body-font">
           <div className="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
             <Link href="/" legacyBehavior>
@@ -43,6 +45,7 @@ export default function RootLayout({ children }) {
           </div>
         </header>
         <main>{children}</main>
+        </Providers>
       </body>
     </html>
   );

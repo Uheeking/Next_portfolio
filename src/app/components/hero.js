@@ -19,7 +19,7 @@ export default function Hero() {
         <div style={{ marginTop: "5px", fontSize: "35px", fontWeight: "700" }}>
           I'm Full Stack Developer Uheeking.
         </div>
-        <div className="flex mt-2 bg-white">
+        <div className="flex mt-2">
           <Link href="/project" legacyBehavior>
             <a className="btn-project">프로젝트 보러가기</a>
           </Link>

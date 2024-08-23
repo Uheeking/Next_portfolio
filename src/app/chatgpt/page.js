@@ -5,14 +5,13 @@ import axios from "axios";
 import Spinner from "../components/spinner";  // Import the Spinner component
 require("dotenv").config();
 
-const url = process.env.NEXT_PUBLIC_NOTION_URL;
 const Chatgpt = dynamic(() => import('../components/chatgpt'));
 
 export default function Gpt() {
   const [projects, setProjects] = useState([]);
 
   useEffect(() => {
-    axios.get(`${url}/api/gpt`)
+    axios.get(`/api/gpt`)
       .then(response => {
         const gptProjects = response.data.results;
         setProjects(gptProjects);

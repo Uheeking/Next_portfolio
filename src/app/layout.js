@@ -2,7 +2,7 @@ import dynamic from 'next/dynamic';
 import Link from "next/link";
 import Image from "next/image";
 import profile from '../../public/profile.png';
-import Providers from './Provider'
+import Providers from './provider'
 import '../../src/app/globals.css'
 
 const DarkModeToggleButton = dynamic(() => import('./components/dark-mode-toggle-button'));

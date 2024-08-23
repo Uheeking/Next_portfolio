@@ -33,13 +33,17 @@ export default function Contact() {
   const handleSubmit = (e) => {
     e.preventDefault();
     axios
-      .post(`${URL}`, {
+      .post(`/api/contact`, {
         name: name,
         phone: phone,
         email: email,
         text: text,
+      }, { 
+        withCredentials: true // 클라이언트와 서버가 통신할때 쿠키와 같은 인증 정보 값을 공유하겠다는 설정
       })
       .then((result) => {
+        console.log('dlrjsrk',result);
+        
         console.log(result.data.code);
         if(result.data.code == 200){
           alert(result.data.message)

@@ -7,6 +7,10 @@ module.exports = {
         source: '/:path*',
         destination: 'https://api.notion.com/:path*',
       },
+      {
+        source: '/slack/:path*',
+        destination: 'https://port-0-pr-express-7hqac2alhimyyk6.sel4.cloudtype.app/:path*',
+      },
     ];
   },
   webpack: (config) => {

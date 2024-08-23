@@ -90,7 +90,7 @@ export default function Contact() {
   };
 
   return (
-    <div className="flex flex-col items-center justify-center text-center">
+    <div className="flex flex-col items-center justify-center text-center mt-10">
     <div className="sm:w-3/5 lg:w-2/5">
       <div className="text-3xl italic font-bold">Contact</div>
       <div>프로젝트를 보고 제가 마음에 드신다면 아래의 폼을 작성해서 제출해주세요. 그러면 저에게 연락이 갑니다. </div>

@@ -1,7 +1,7 @@
 "use client";
 import dynamic from 'next/dynamic';
 import React, { useState, useEffect, useMemo } from "react";
-import Spinner from "../components/Spinner";
+import Spinner from "../components/spinner";
 import { useRouter } from 'next/navigation';
 import axios from "axios";
 require("dotenv").config();

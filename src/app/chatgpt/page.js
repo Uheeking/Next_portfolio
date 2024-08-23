@@ -2,7 +2,7 @@
 import React, { useState, useEffect } from "react";
 import dynamic from 'next/dynamic';
 import axios from "axios";
-import Spinner from "../components/Spinner";  // Import the Spinner component
+import Spinner from "../components/spinner";  // Import the Spinner component
 require("dotenv").config();
 
 const url = process.env.NEXT_PUBLIC_NOTION_URL;

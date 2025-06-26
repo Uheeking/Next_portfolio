@@ -1,0 +1,211 @@
+.hero-container {
+   min-height: 100vh;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   /* background: #fafafa; */
+   padding: 2rem;
+}
+
+.hero-content {
+   max-width: 1200px;
+   width: 100%;
+   display: grid;
+   grid-template-columns: 1fr 2fr;
+   gap: 4rem;
+   align-items: center;
+}
+
+.profile-section {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+
+.profile-image-wrapper {
+   position: relative;
+   opacity: 0;
+   animation: fadeInUp 0.8s ease-out 0.2s forwards;
+}
+
+.profile-image {
+   border-radius: 50%;
+   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.06);
+   transition: transform 0.3s ease;
+}
+
+.profile-image:hover {
+   transform: scale(1.02);
+}
+
+.content-section {
+   opacity: 0;
+   animation: fadeInUp 0.8s ease-out 0.4s forwards;
+}
+
+.text-content {
+   margin-bottom: 3rem;
+}
+
+.greeting {
+   font-size: 1rem;
+   font-weight: 400;
+   color: #666;
+   margin: 0 0 1.5rem 0;
+   letter-spacing: 0.5px;
+   text-transform: uppercase;
+}
+
+.main-heading {
+   font-size: 4rem;
+   line-height: 1.1;
+   margin: 0 0 2rem 0;
+   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+}
+
+.heading-light {
+   font-weight: 300;
+   color: #333;
+}
+
+.heading-bold {
+   font-weight: 700;
+   color: #000;
+}
+
+.heading-accent {
+   font-weight: 700;
+   color: #0066cc;
+   position: relative;
+}
+
+.description {
+   font-size: 1.125rem;
+   line-height: 1.6;
+   color: #666;
+   margin: 0;
+   font-weight: 400;
+   max-width: 500px;
+}
+
+.action-section {
+   padding-top: 2rem;
+}
+
+.cta-link {
+   display: inline-flex;
+   align-items: center;
+   gap: 0.5rem;
+   font-size: 1.125rem;
+   font-weight: 600;
+   color: #0066cc;
+   text-decoration: none;
+   border-bottom: 2px solid transparent;
+   transition: all 0.2s ease;
+   padding: 0.5rem 0;
+}
+
+.cta-link:hover {
+   border-bottom-color: #0066cc;
+   transform: translateX(4px);
+}
+
+.arrow {
+   font-size: 1.25rem;
+   transition: transform 0.2s ease;
+}
+
+.cta-link:hover .arrow {
+   transform: translateX(4px);
+}
+
+@keyframes fadeInUp {
+   from {
+      opacity: 0;
+      transform: translateY(20px);
+   }
+   to {
+      opacity: 1;
+      transform: translateY(0);
+   }
+}
+
+/* Dark mode support */
+@media (prefers-color-scheme: dark) {
+   .hero-container {
+      background: #0a0a0a;
+   }
+
+   .greeting {
+      color: #999;
+   }
+
+   .heading-light {
+      color: #ccc;
+   }
+
+   .heading-bold {
+      color: #fff;
+   }
+
+   .description {
+      color: #999;
+   }
+
+   .profile-image {
+      box-shadow: 0 8px 32px rgba(255, 255, 255, 0.04);
+   }
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+   .hero-content {
+      grid-template-columns: 1fr;
+      gap: 3rem;
+      text-align: center;
+   }
+
+   .main-heading {
+      font-size: 3.5rem;
+   }
+}
+
+@media (max-width: 768px) {
+   .hero-container {
+      padding: 1.5rem;
+   }
+
+   .hero-content {
+      gap: 2.5rem;
+   }
+
+   .main-heading {
+      font-size: 2.5rem;
+   }
+
+   .description {
+      font-size: 1rem;
+   }
+}
+
+@media (max-width: 480px) {
+   .hero-container {
+      padding: 1rem;
+   }
+
+   .main-heading {
+      font-size: 2rem;
+   }
+
+   .greeting {
+      font-size: 0.875rem;
+   }
+
+   .description {
+      font-size: 0.95rem;
+   }
+
+   .cta-link {
+      font-size: 1rem;
+   }
+}
